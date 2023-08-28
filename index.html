@@ -1,11 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@3.6.2/dist/full.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+        *{
+            font-family: 'Poppins', sans-serif;
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+    </style>
+
     <title>Phone Bazz</title>
-</head>
-<body>
-    
-</body>
+  </head>
+  <body>
+    <!-- header section  -->
+    <header class="bg-sky-200 relative pb-52">
+      <nav class="w-[80%] py-6 mx-auto flex justify-between items-center">
+        <h1 class="font-bold text-2xl">
+          Phone <span class="text-orange-500">Bazz</span>
+        </h1>
+        <button
+          class="btn bg-sky-700 border-none hover:bg-sky-600 text-white font-bold"
+        >
+          Sign Up
+        </button>
+      </nav>
+
+      <!-- banner -->
+      <section class="flex flex-col justify-center items-center gap-4 py-10 text-center">
+        <h1 class="text-5xl font-bold">Apple Iphone 13 Pro Max</h1>
+        <p>
+          There are many variations of passages of Lorem Ipsum available, but
+          the majority <br />
+          have suffered alteration in some form, by injected humou.
+        </p>
+        <button
+          class="btn bg-sky-700 border-none hover:bg-sky-600 text-white font-bold"
+        >
+          Sign Up
+        </button>
+        <div class="flex justify-center gap-5 absolute top-[60%] items-baseline">
+            <img src="./img/pho.png" class="w-44 h-80" alt="">
+            <img src="./img/pho.png" class="w-52" alt="">
+            <img src="./img/pho.png" class="w-44 h-80" alt="">
+        </div>
+      </section>
+    </header>
+  </body>
 </html>
