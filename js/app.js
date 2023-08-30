@@ -1,14 +1,24 @@
-function getProducts() {
-  fetch("https://openapi.programming-hero.com/api/phones?search=iphone")
+function getProducts(phone) {
+  fetch(`https://openapi.programming-hero.com/api/phones?search=${phone}`)
     .then((res) => res.json())
     .then((data) => moveTamplete(data));
 }
 
 const moveTamplete = (data) => {
   const parent = document.getElementById('parent')
+  parent.textContent = ''
   const getData = data.data;
-  console.log(getData);
-  getData.forEach((element) => {
+
+  const seeall = document.getElementById('seeall');
+  if(getData.length > 6){
+    seeall.classList.remove('hidden')
+  }else{
+    seeall.classList.add('hidden')
+  }
+  
+  const showdata = getData.slice(0, 6);
+ 
+  showdata.forEach((element) => {
     console.log(element);
 
     const div1 = document.createElement("div");
@@ -34,4 +44,14 @@ const moveTamplete = (data) => {
   });
 };
 
-getProducts();
+
+const  searchProducts = () => {
+    const searchPhone = document.getElementById('userPhone');
+    const serPhone = searchPhone.value;
+    getProducts(serPhone);
+
+}
+
+
+
+getProducts('a')

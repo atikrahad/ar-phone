@@ -73,16 +73,43 @@
                 <h1 class="text-4xl font-semibold">Search your phone</h1>
                 <div class="relative">
                     <svg xmlns="http://www.w3.org/2000/svg" class="absolute text-[#0000007e] top-[9px] left-2" viewBox="-2.5 -2.5 24 24" width="24" fill="currentColor"><path d="M8 14A6 6 0 1 0 8 2a6 6 0 0 0 0 12zm6.32-1.094l3.58 3.58a1 1 0 1 1-1.415 1.413l-3.58-3.58a8 8 0 1 1 1.414-1.414z"></path></svg>
-                    <input type="text" class="bg-slate-300 rounded-l-md w-96 px-7 placeholder:text-[#0000007e] py-2"  placeholder=" search your phone">
-                    <button class="p-2 relative rounded-r-md -ml-2 bg-sky-700 border-none hover:bg-sky-600 text-white font-bold">Search</button>
+                    <input id="userPhone" type="text" class="bg-slate-300 outline-none rounded-l-md w-96 px-7 placeholder:text-[#0000007e] py-2"  placeholder=" search your phone">
+                    <button onclick="searchProducts()" class="p-2 relative rounded-r-md -ml-2 bg-sky-700 border-none hover:bg-sky-600 text-white font-bold">Search</button>
                 </div>
             </div>
 
             <div id="parent" class="grid gap-5 grid-cols-3 ">
                 
             </div>
+
+            <button id="seeall" onclick="showAll()" class="p-2 my-5 rounded-md bg-sky-700 border-none hover:bg-sky-600 text-white hidden font-bold">See All</button>            
         </section>
     </main>
+
+    <!-- footer section  -->
+
+    <footer class="bg-sky-200 py-6">
+      <div class="lg:w-[80%] w-[90%] mx-auto">
+        <div class="flex justify-between items-center py-6">
+          <div>
+            <h1 class="font-bold text-2xl">
+              Phone <span class="text-orange-500">Bazz</span>
+            </h1>
+            <p>You can definitely work.</p>
+          </div>
+          <div>
+            <div></div>
+            <button
+          class="btn bg-sky-700 border-none hover:bg-sky-600 text-white font-bold"
+        >
+          Sign Up
+        </button>
+          </div>
+        </div>
+        <hr class="border-[#00000050]">
+        <div></div>
+      </div>
+    </footer>
 
     <script src="./js/app.js"></script>
   </body>
