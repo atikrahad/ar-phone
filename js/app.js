@@ -33,7 +33,7 @@ const moveTamplete = (data) => {
                     <img src="${element.image}" alt="Shoes" class="rounded-xl mx-auto h-44"/>
                     </div>
                     <div class=" text-center space-y-2">
-                      <h2 class="text-3xl font-bold">${element.phone_name}</h2>
+                      <h2 class="md:text-2xl text-xl lg:text-3xl font-bold">${element.phone_name}</h2>
                       <p class="text-[#706F6F]">${element.slug}</p>
                       <h2 class="text-3xl font-bold">$999</h2>
                       <button onclick="my_modal_5.showModal(), showID('${element.slug}')"  class="btn bg-sky-700 border-none hover:bg-sky-600 text-white font-bold">Show Details</button> 
