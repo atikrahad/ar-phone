@@ -19,12 +19,12 @@
     />
 
     <style>
-        *{
-            font-family: 'Poppins', sans-serif;
-            padding: 0;
-            margin: 0;
-            box-sizing: border-box;
-        }
+      * {
+        font-family: "Poppins", sans-serif;
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
     </style>
 
     <title>Phone Bazz</title>
@@ -44,7 +44,9 @@
       </nav>
 
       <!-- banner -->
-      <section class="flex flex-col justify-center items-center gap-4 py-10 text-center">
+      <section
+        class="flex flex-col justify-center items-center gap-4 py-10 text-center"
+      >
         <h1 class="text-5xl font-bold">Apple Iphone 13 Pro Max</h1>
         <p>
           There are many variations of passages of Lorem Ipsum available, but
@@ -56,10 +58,12 @@
         >
           Sign Up
         </button>
-        <div class="flex justify-center gap-5 absolute top-[60%] items-baseline">
-            <img src="./img/pho.png" class="w-44 h-80" alt="">
-            <img src="./img/pho.png" class="w-52" alt="">
-            <img src="./img/pho.png" class="w-44 h-80" alt="">
+        <div
+          class="flex justify-center gap-5 absolute top-[60%] items-baseline"
+        >
+          <img src="./img/pho.png" class="w-44 h-80" alt="" />
+          <img src="./img/pho.png" class="w-52" alt="" />
+          <img src="./img/pho.png" class="w-44 h-80" alt="" />
         </div>
       </section>
     </header>
@@ -67,28 +71,62 @@
     <!-- main section  -->
 
     <main class="pt-60">
-        <section class="w-[80%] mx-auto">
+      <section class="w-[80%] mx-auto">
+        <div class="flex flex-col justify-center gap-4 items-center py-10">
+          <h1 class="text-4xl font-semibold">Search your phone</h1>
+          <div class="relative">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="absolute text-[#0000007e] top-[9px] left-2"
+              viewBox="-2.5 -2.5 24 24"
+              width="24"
+              fill="currentColor"
+            >
+              <path
+                d="M8 14A6 6 0 1 0 8 2a6 6 0 0 0 0 12zm6.32-1.094l3.58 3.58a1 1 0 1 1-1.415 1.413l-3.58-3.58a8 8 0 1 1 1.414-1.414z"
+              ></path>
+            </svg>
+            <input
+              id="userPhone"
+              type="text"
+              class="bg-slate-300 outline-none rounded-l-md w-96 px-7 placeholder:text-[#0000007e] py-2"
+              placeholder=" search your phone"
+            />
+            <button
+              onclick="searchProducts()"
+              class="p-2 relative rounded-r-md -ml-2 bg-sky-700 border-none hover:bg-sky-600 text-white font-bold"
+            >
+              Search
+            </button>
+          </div>
+        </div>
 
-            <div class="flex flex-col justify-center  gap-4 items-center py-10">
-                <h1 class="text-4xl font-semibold">Search your phone</h1>
-                <div class="relative">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="absolute text-[#0000007e] top-[9px] left-2" viewBox="-2.5 -2.5 24 24" width="24" fill="currentColor"><path d="M8 14A6 6 0 1 0 8 2a6 6 0 0 0 0 12zm6.32-1.094l3.58 3.58a1 1 0 1 1-1.415 1.413l-3.58-3.58a8 8 0 1 1 1.414-1.414z"></path></svg>
-                    <input id="userPhone" type="text" class="bg-slate-300 outline-none rounded-l-md w-96 px-7 placeholder:text-[#0000007e] py-2"  placeholder=" search your phone">
-                    <button onclick="searchProducts()" class="p-2 relative rounded-r-md -ml-2 bg-sky-700 border-none hover:bg-sky-600 text-white font-bold">Search</button>
-                </div>
-            </div>
+        <div id="spinner" class="w-10 mx-auto mb-40 mt-32 hidden">
+          <span class="loading loading-dots text-sky-700 loading-lg"></span>
+        </div>
 
-            <div id="parent" class="grid gap-5 grid-cols-3 ">
-                
-            </div>
+        <div id="parent" class="grid gap-5 grid-cols-3 min-h-[50vh]"></div>
 
-            <button id="seeall" onclick="showAll()" class="p-2 my-5 rounded-md bg-sky-700 border-none hover:bg-sky-600 text-white hidden font-bold">See All</button>            
-        </section>
+        <!-- Open the modal using ID.showModal() method -->
+        
+        <dialog id="my_modal_5" class="modal  sm:modal-middle">
+          
+        </dialog>
+
+        <button
+          id="seeall"
+          onclick="showAll()"
+          class="p-2 my-5 rounded-md bg-sky-700 border-none hover:bg-sky-600 text-white hidden font-bold"
+        >
+          See All
+        </button>
+      </section>
     </main>
+    
 
     <!-- footer section  -->
 
-    <footer class="bg-sky-200 py-6">
+    <footer class="bg-sky-200 py-6 mt-6">
       <div class="lg:w-[80%] w-[90%] mx-auto">
         <div class="flex justify-between items-center py-6">
           <div>
@@ -100,14 +138,45 @@
           <div>
             <div></div>
             <button
-          class="btn bg-sky-700 border-none hover:bg-sky-600 text-white font-bold"
-        >
-          Sign Up
-        </button>
+              class="btn bg-sky-700 border-none hover:bg-sky-600 text-white font-bold"
+            >
+              Sign Up
+            </button>
           </div>
         </div>
-        <hr class="border-[#00000050]">
-        <div></div>
+        <hr class="border-[#00000050]" />
+        <div class="flex justify-between items-center py-6">
+          <div class="flex flex-col">
+            <a href="#">Product</a>
+            <a href="#">Browse jobs</a>
+            <a href="#">Remote jobs</a>
+            <a href="#">Startup jobs</a>
+            <a href="#">Company jobs</a>
+          </div>
+
+          <div class="flex flex-col">
+            <a href="#">Popular</a>
+            <a href="#">UIUX Design</a>
+            <a href="#">Product Design</a>
+            <a href="#">Back-End Developer</a>
+            <a href="#">Front-End Developer</a>
+          </div>
+          <div class="flex flex-col">
+            <a href="#">Resource</a>
+            <a href="#">Faq</a>
+            <a href="#">Support</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+          </div>
+
+          <div class="flex flex-col">
+            <a href="#">Company</a>
+            <a href="#">About Us</a>
+            <a href="#">Contact Us</a>
+            <a href="#">Career Tips</a>
+            <a href="#">Careers</a>
+          </div>
+        </div>
       </div>
     </footer>
 
